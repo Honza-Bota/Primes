@@ -69,7 +69,7 @@ namespace Primes
 
         bool Obsahuje_Jednotlive_Znaky(string input, string param)
         {
-            Convert.ToInt32(param);
+            Convert.ToUInt64(param);
 
             char[] znaky = param.ToCharArray(); 
             int vyskyty = 0;
@@ -88,7 +88,7 @@ namespace Primes
 
         bool Vetsi_Cislo_Nez_Parametr(string input, string param)
         {
-            Convert.ToInt32(param);
+            Convert.ToUInt64(param);
 
             if (Convert.ToUInt64(input) > Convert.ToUInt64(param)) return true;
             else return false;
@@ -106,7 +106,7 @@ namespace Primes
 
         bool Obsahuje_Znaky_Po_Sobe(string input, string param)
         {
-            Convert.ToInt32(param);
+            Convert.ToUInt64(param);
 
             if (input.Contains(param)) return true;
             else return false;
