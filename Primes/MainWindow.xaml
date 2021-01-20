@@ -1,0 +1,59 @@
+﻿<Window x:Class="Primes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Primes"
+        mc:Ignorable="d"
+        Title="Hledání prvočísel" 
+        Height="850" 
+        Width="380"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFB6B6B6" Offset="0"/>
+            <GradientStop Color="#FFB9B2FF" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel x:Name="firstSearch" Grid.Row="0" Margin="15,15,15,0" Background="GhostWhite">
+            <Label Content="Úloha 1" FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,10,10,-5"/>
+            <Label Content="Kritérium:" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <ComboBox x:Name="cbFirstCriterium" Margin="20,0,50,0" SelectedIndex="0"/>
+            <Label Content="Parametr:" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <TextBox x:Name="tbFirstCriteriumParameter" Margin="20,0,50,0"/>
+            <Label Content="Výsledek:" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <TextBox x:Name="tbFirstOut" Margin="20,0,50,0" IsReadOnly="True"/>
+            <Button x:Name="butFirst" Content="Spustit výpočet" Click="butFirst_Click" FontSize="15" FontWeight="Bold" Padding="5" Background="#FF0FC920" BorderThickness="0" Margin="20,10,20,5"/>
+        </StackPanel>
+        <StackPanel x:Name="secondSearch" Grid.Row="1" Margin="15,15,15,0" Background="GhostWhite">
+            <Label Content="Úloha 2" FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,10,10,-5"/>
+            <Label Content="Kritérium:" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <ComboBox x:Name="cbSecondCriterium" Margin="20,0,50,0" SelectedIndex="0"/>
+            <Label Content="Parametr:" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <TextBox x:Name="tbSeconfCriteriumParameter" Margin="20,0,50,0"/>
+            <Label Content="Výsledek:" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <TextBox x:Name="tbSecondOut" Margin="20,0,50,0" IsReadOnly="True"/>
+            <Button x:Name="butsecond" Content="Spustit výpočet" Click="butsecond_Click"  FontSize="15" FontWeight="Bold" Padding="5" Background="#FF0FC920" BorderThickness="0" Margin="20,10,20,5"/>
+        </StackPanel>
+        <StackPanel x:Name="thirdSearch" Grid.Row="2" Margin="15,15,15,5" Background="GhostWhite">
+            <Label Content="Úloha 3" FontSize="25" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,10,10,-5"/>
+            <Label Content="Kritérium:" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <ComboBox x:Name="cbThirdCriterium" Margin="20,0,50,0" SelectedIndex="0"/>
+            <Label Content="Parametr:" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <TextBox x:Name="tbThirdCriteriumParameter" Margin="20,0,50,0"/>
+            <Label Content="Výsledek:" FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+            <TextBox x:Name="tbThirdOut" Margin="20,0,50,0" IsReadOnly="True"/>
+            <Button x:Name="butThird" Content="Spustit výpočet" Click="butThird_Click"  FontSize="15" FontWeight="Bold" Padding="5" Background="#FF0FC920" BorderThickness="0" Margin="20,10,20,15"/>
+        </StackPanel>
+    </Grid>
+</Window>
